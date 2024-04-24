@@ -1,6 +1,9 @@
-mult: first.o second.o
-	gcc first.o second.o
-first.o: first.c
-	gcc -c first.c
-second.o: second.c
-	gcc -c second.c
+foo: a.o b.o
+	arm-linux-gnueabi-gcc a.o b.o -o foo
+
+a.o: a.c
+	arm-linux-gnueabi-gcc -c a.c -o a.o
+
+b.o: b.c
+	arm-linux-gnueabi-gcc -c b.c -o b.o
+
